@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 class="header"> Bookie: Book Review App </h1>
+    </head>
+    <body>
+    
+        <!--If the user is signed in show the contents below-->
+        <% if current_user %>
+
+        <p style="text-align: center;">Welcome Bookie!</p>
+        
+        <p style="text-align: center;">You are signed in</p>
+
+        <% else %>
+
+        <% end %>
+
+            <div class="block">
+
+                <div class="about_div">
+                    <p class= "about_text">Book lovers, stop us if you’ve heard this one before: you’ve just finished a mind-blowing book and you need to hear some discussion about it.  </p>
+                </div>
+
+                <div class="about_div2">
+                    <p class= "about_text2">What do you do? Dive straight into the limitless realm of the Internet and search for book review sites, of course. </p>
+                </div>
+
+                <div class="about_div3">
+                    <p class= "about_text3">Now you can add, discuss and share your new favourite reads! Spread information on the books you've read so others have an insight!</p>
+                </div>
+                
+                <div class="wallpaper">
+                    <%= image_tag("home/book_review_wallpaper.jpg", width: '900px', height: '700px')%>
+                </div>
+            </div>
+
+    </body>
+</html>

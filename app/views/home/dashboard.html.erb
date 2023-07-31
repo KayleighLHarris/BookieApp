@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 class="header"> Book Reviews </h1>
+    </head>
+        <body>
+
+            <!--If the user is signed in show the contents below-->
+            <% if current_user %>
+
+                <!--Retrieve the user email-->
+                <p style="text-align: center; margin-top: 30px;">Hello Bookie: <%= current_user.email %></p>
+                
+                <!--Return the user name when connecting-->
+                <% if current_user.moderator? %>
+                <% end %>
+
+                <div class="new_app">
+                    <%= link_to "New Bookie Review", new_post_path %>
+                </div>
+
+                <div class="new_link">
+                    <%= link_to "View Bookie Reviews", posts_path %>
+                </div>
+
+            <% else %>
+            <!--If the user is not signed in , alert and show the content below-->
+                <p style="text-align: center;"> Sorry! You are not Signed In <p>
+
+                <div class="block">
+                    <div class="wallpaper2">
+                        <%= image_tag("dashboard/blurbooks_wallpaper.jpg", width: '2400px', height: '1600px')%>
+                    </div>
+                </div>
+
+            <% end %>
+        </body>
+</html>
