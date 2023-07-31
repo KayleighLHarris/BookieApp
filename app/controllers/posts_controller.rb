@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    
   end
 
   # POST /posts or /posts.json
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to post_url(@post), notice: "Applicant was successfully created." }
+        format.html { redirect_to post_url(@post), notice: "Review was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -45,7 +46,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to post_url(@post), notice: "Applicant was successfully updated." }
+        format.html { redirect_to post_url(@post), notice: "Review was successfully updated." }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -59,7 +60,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Applicant was successfully deleted." }
+      format.html { redirect_to posts_url, notice: "Review was successfully deleted." }
       format.json { head :no_content }
     end
   end
@@ -72,6 +73,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:first_name, :last_name, :age, :phone, :status)
+      params.require(:post).permit(:book_title, :barcode, :rating, :theme, :review)
     end
 end

@@ -2,7 +2,7 @@
 
 <h1>Bookie Reviews</h1>
 
-<div id="posts">
+<div id="Reviews">
   <% @posts.each do |post| %>
     <%= render post %>
     <p style="text-align: center;">
@@ -13,5 +13,5 @@
 </div>
 
 <div class="new_app">
-<%= link_to "New Applicant", new_post_path %>
+<%= link_to "New Review", new_post_path %>
 </div>
