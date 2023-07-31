@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  resource :applicants
+  resource :reviews
 
   root "home#index"
   get "dashboard", to: "home#dashboard"

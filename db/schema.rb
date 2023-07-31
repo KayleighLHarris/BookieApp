@@ -12,11 +12,11 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_01_13_211753) do
   create_table "posts", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "age"
-    t.integer "phone"
-    t.string "status"
+    t.string "book_title"
+    t.string "barcode"
+    t.integer "rating"
+    t.string "theme"
+    t.string "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

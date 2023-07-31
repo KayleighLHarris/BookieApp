@@ -1,11 +1,11 @@
 class CreatePosts < ActiveRecord::Migration[7.0]
   def change
     create_table :posts do |t|
-      t.string :first_name
-      t.string :last_name
-      t.integer :age
-      t.integer :phone
-      t.string :status
+      t.string :book_title
+      t.string :barcode
+      t.integer :rating
+      t.integer :theme
+      t.string :review
 
       t.timestamps
     end
